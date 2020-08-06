@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
 import getDataApi from "../services/getDataApi";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
@@ -22,12 +23,24 @@ const App = () => {
   const filteredCharacters = items.filter((item) => {
     return item.name.toUpperCase().includes(filterContent.toUpperCase());
   });
+
+  //REACT ROUTER
+  const renderCharacterDetail = (props) => {
+    console.log(props);
+    const foundItem = items.find((item) => {
+      return item.id === match.params.id;
+    });
+    return <CharacterDetail />;
+  };
+
   return (
     <>
       <h1> Rick and Morty </h1>
       <Filter handleFilter={handleFilter} />
       <CharacterList items={filteredCharacters} />
-      <CharacterDetail />
+      <Switch>
+        <Route path="/item/:id" render={renderCharacterDetail} />
+      </Switch>
     </>
   );
 };
