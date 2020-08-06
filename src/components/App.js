@@ -6,17 +6,27 @@ import CharacterDetail from "./CharacterDetail";
 
 const App = () => {
   const [items, setItems] = useState([]);
+  const [filterContent, setFilterContent] = useState("");
   useEffect(() => {
     getDataApi().then((data) => {
       setItems(data);
     });
   }, []);
 
+  //EVENT HANDLERS
+  const handleFilter = (data) => {
+    setFilterContent(data);
+  };
+
+  //RENDER
+  const filteredCharacters = items.filter((item) => {
+    return item.name.toUpperCase().includes(filterContent.toUpperCase());
+  });
   return (
     <>
       <h1> Rick and Morty </h1>
-      <Filter />
-      <CharacterList items={items} />
+      <Filter handleFilter={handleFilter} />
+      <CharacterList items={filteredCharacters} />
       <CharacterDetail />
     </>
   );

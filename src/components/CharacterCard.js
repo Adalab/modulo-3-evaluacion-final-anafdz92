@@ -1,7 +1,6 @@
 import React from "react";
 
 const CharacterCard = (props) => {
-  console.log(props.item);
   //CON UN IF DETERMINAR SI LA IMAGEN ES NULL QUE SALGA UNA MÍA
   return (
     <>
