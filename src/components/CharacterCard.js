@@ -1,17 +1,18 @@
 import React from "react";
 
 const CharacterCard = (props) => {
+  console.log(props.item);
+  //CON UN IF DETERMINAR SI LA IMAGEN ES NULL QUE SALGA UNA MÍA
   return (
     <>
       <li>
-        <p>Holi soy una fotito</p>
-        {/* <img
-          src={props.item.photo}
+        <img
+          src={props.item.image}
           alt={props.item.name}
           title={props.item.name}
-        /> */}
-        <h4>Me llamo Morty</h4>
-        <p>Soy un Humano</p>
+        />
+        <h4>{props.item.name}</h4>
+        <p>{props.item.species}</p>
       </li>
     </>
   );

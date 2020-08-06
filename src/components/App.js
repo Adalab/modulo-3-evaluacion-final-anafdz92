@@ -15,15 +15,9 @@ const App = () => {
   return (
     <>
       <h1> Rick and Morty </h1>
-      <section>
-        <Filter />
-      </section>
-      <section>
-        <CharacterList />
-      </section>
-      <section>
-        <CharacterDetail />
-      </section>
+      <Filter />
+      <CharacterList items={items} />
+      <CharacterDetail />
     </>
   );
 };
