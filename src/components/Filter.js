@@ -3,7 +3,8 @@ import React from "react";
 const Filter = (props) => {
   return (
     <>
-      <section></section>
+      <label htmlFor="character"> Encuentra a tu personaje favoritx </label>
+      <input type="text" name="character" id="character" />
     </>
   );
 };

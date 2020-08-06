@@ -1,10 +1,17 @@
-import React from "react";
-//import React, { useState } from 'react'; POR SI PONES STATE
-//import getDataApi from "../services/getDataApi";
+import React, { useEffect, useState } from "react";
+import getDataApi from "../services/getDataApi";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
+import CharacterDetail from "./CharacterDetail";
 
 const App = () => {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    getDataApi().then((data) => {
+      setItems(data);
+    });
+  }, []);
+
   return (
     <>
       <h1> Rick and Morty </h1>
@@ -13,6 +20,9 @@ const App = () => {
       </section>
       <section>
         <CharacterList />
+      </section>
+      <section>
+        <CharacterDetail />
       </section>
     </>
   );
