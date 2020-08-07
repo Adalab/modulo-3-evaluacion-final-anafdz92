@@ -33,21 +33,21 @@ const App = () => {
 
   //REACT ROUTER
   const renderCharacterDetail = (props) => {
-    console.log(props);
     const itemId = parseInt(props.match.params.id);
     const foundItem = items.find((item) => {
       return item.id === itemId;
     });
-    if (foundItem !== undefined) {
-      return <CharacterDetail item={foundItem} />;
-    }
+    // if (foundItem !== undefined) {
+    return <CharacterDetail item={foundItem} />;
+    // }
   };
 
   return (
     <>
-      <img src={Logo} alt="Rick and Morty" title="Rick and Morty" />
+      {/* <img src={Logo} alt="Rick and Morty" title="Rick and Morty" /> */}
       <Switch>
         <Route exact path="/">
+          <img src={Logo} alt="Rick and Morty" title="Rick and Morty" />
           <Filter handleFilter={handleFilter} />
           {/*<Route exact path="/#" />*/}
           <CharacterList
