@@ -8,8 +8,10 @@ import Logo from "../images/morty.png";
 import "../stylesheets/App.scss";
 
 const App = () => {
-  const [items, setItems] = useState([].sort()); //.sort() PARA ORDENAR ALFABÉTICAMENTE?
-  const [filterContent, setFilterContent] = useState("");
+  const [items, setItems] = useState([].sort());
+  const [filterContent, setFilterContent] = useState(
+    JSON.parse(localStorage.getItem("myValueLocalStorage")) || ""
+  );
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -20,13 +22,16 @@ const App = () => {
     setLoading(false);
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("myValueLocalStorage", JSON.stringify(filterContent));
+  });
+
   //EVENT HANDLERS
   const handleFilter = (data) => {
     setFilterContent(data);
   };
 
   //RENDER
-  // if (!data.includes)
   const filteredCharacters = items.filter((item) => {
     return item.name.toUpperCase().includes(filterContent.toUpperCase());
   });
@@ -37,19 +42,18 @@ const App = () => {
     const foundItem = items.find((item) => {
       return item.id === itemId;
     });
-    // if (foundItem !== undefined) {
     return <CharacterDetail item={foundItem} />;
-    // }
   };
 
   return (
     <>
-      {/* <img src={Logo} alt="Rick and Morty" title="Rick and Morty" /> */}
       <Switch>
         <Route exact path="/">
           <img src={Logo} alt="Rick and Morty" title="Rick and Morty" />
-          <Filter handleFilter={handleFilter} />
-          {/*<Route exact path="/#" />*/}
+          <Filter handleFilter={handleFilter} filterContent={filterContent} />
+          {loading === true
+            ? "Cargando..."
+            : "Mostrando tus datos cargados! Bien!..."}
           <CharacterList
             items={filteredCharacters}
             filterContent={filterContent}
