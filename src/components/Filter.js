@@ -1,7 +1,7 @@
 import React from "react";
 
 const Filter = (props) => {
-  console.log(props);
+  console.log(props.filterContent);
   const handleChange = (ev) => {
     props.handleFilter(ev.target.value);
   };
@@ -20,7 +20,7 @@ const Filter = (props) => {
           id="character"
           onChange={handleChange}
           handleFilter={props.handleFilter}
-          placeholder={props.filterContent.value} //INTENTO QUE EL LOCAL STORAGE SE  PINTE EN EL VALUE
+          placeholder={props.filterContent} //INTENTO QUE EL LOCAL STORAGE SE  PINTE EN EL VALUE
         />
       </form>
     </>
