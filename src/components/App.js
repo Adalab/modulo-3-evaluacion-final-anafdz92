@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <>
-      <h1> Rick and Morty </h1>
+      <img src={Logo} alt="Rick and Morty" title="Rick and Morty" />
       <Switch>
         <Route exact path="/">
           <Filter handleFilter={handleFilter} />
