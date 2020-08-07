@@ -2,9 +2,11 @@ import React from "react";
 import CharacterCard from "./CharacterCard";
 
 const CharacterList = (props) => {
-  const itemElements = props.items.map((item) => {
-    return <CharacterCard key={item.id} item={item} />;
-  });
+  const itemElements = props.items
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((item) => {
+      return <CharacterCard key={item.id} item={item} />;
+    });
 
   if (props.items.length === 0) {
     return (

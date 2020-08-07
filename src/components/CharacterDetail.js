@@ -2,26 +2,36 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CharacterDetail = (props) => {
-  console.log(props);
+  // let iClassName = "";
 
-  // const countEpisodes = props.item.episode(item=>);
+  // if (props.item.status.dead) {
+  //   iClassName = "fas fa-skull-crossbones";
+  // }
+  //TRYING ICONS
+
   return (
     <>
       <Link to="/item/:id">
-        <section>
+        <section className="detail">
           <Link to="/">
             <p>CIÉRRAME</p>
           </Link>
-          <img
-            src={props.item.image}
-            alt={props.item.name}
-            title={props.item.name}
-          />
-          <ul>
+          <div>
+            <img
+              src={props.item.image}
+              alt={props.item.name}
+              title={props.item.name}
+            />
+          </div>
+          <ul className="textDetail">
             <li>Nombre: {props.item.name}</li>
             <li>Especie: {props.item.species}</li>
             <li>Planeta: {props.item.location}</li>
-            <li>Vivo o muerto?: {props.item.status} </li>
+            <li>
+              Vivo o muerto?: {props.item.status}
+              {/* <i className={iClassName}></i> */}
+              <i className="fas fa-skull-crossbones"></i>
+            </li>
             <li>
               Número de Episodios en los que aparece:{" "}
               {props.item.episode.length}

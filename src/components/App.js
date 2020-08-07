@@ -5,9 +5,10 @@ import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterDetail from "./CharacterDetail";
 import Logo from "../images/morty.png";
+import "../stylesheets/App.scss";
 
 const App = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([].sort()); //.sort() PARA ORDENAR ALFABÉTICAMENTE?
   const [filterContent, setFilterContent] = useState("");
   const [loading, setLoading] = useState(false);
 
