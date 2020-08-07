@@ -5,15 +5,21 @@ const Filter = (props) => {
     props.handleFilter(ev.target.value);
   };
 
+  const submitHandler = (ev) => {
+    ev.preventDefault();
+  };
+
   return (
     <>
-      <label htmlFor="character"> Encuentra a tu personaje favoritx </label>
-      <input
-        type="text"
-        name="character"
-        id="character"
-        onChange={handleChange}
-      />
+      <form onSubmit={submitHandler}>
+        <label htmlFor="character"> Encuentra a tu personaje favoritx </label>
+        <input
+          type="text"
+          name="character"
+          id="character"
+          onChange={handleChange}
+        />
+      </form>
     </>
   );
 };
