@@ -1,24 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CharacterDetail = (props) => {
+  console.log(props);
+
+  // const countEpisodes = props.item.episode(item=>);
   return (
     <>
-      <div>
-        <header>
-          <h2>Me llamo Rick y soy una modal</h2>
-          <span></span>
-        </header>
-        <section>
-          {/* <img></img> */}
-          <ul>
-            <li>Nombre</li>
-            <li>Especie</li>
-            <li>Planeta de Origen</li>
-            <li>Vivo/Muerto</li>
-            <li>Episodios en los que aparece</li>
-          </ul>
-        </section>
-      </div>
+      <section>
+        <Link to="/">
+          <p>CIÉRRAME</p>
+        </Link>
+        <img
+          src={props.item.image}
+          alt={props.item.name}
+          title={props.item.name}
+        />
+        <ul>
+          <li>Nombre: {props.item.name}</li>
+          <li>Especie: {props.item.species}</li>
+          <li>Planeta: {props.item.location}</li>
+          <li>Vivo o muerto?: {props.item.status} </li>
+          <li>
+            Número de Episodios en los que aparece: {props.item.episode.length}
+          </li>
+        </ul>
+      </section>
     </>
   );
 };

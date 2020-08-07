@@ -27,10 +27,13 @@ const App = () => {
   //REACT ROUTER
   const renderCharacterDetail = (props) => {
     console.log(props);
+    const itemId = parseInt(props.match.params.id);
     const foundItem = items.find((item) => {
-      return item.id === match.params.id;
+      return item.id === itemId;
     });
-    return <CharacterDetail />;
+    if (foundItem !== undefined) {
+      return <CharacterDetail item={foundItem} />;
+    }
   };
 
   return (
