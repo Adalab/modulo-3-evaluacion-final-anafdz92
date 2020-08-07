@@ -5,7 +5,19 @@ const CharacterList = (props) => {
   const itemElements = props.items.map((item) => {
     return <CharacterCard key={item.id} item={item} />;
   });
-  return <ul>{itemElements}</ul>;
+
+  if (props.items.length === 0) {
+    return (
+      <>
+        <p>No hay ningún personaje que coincida con la palabra:</p>
+        <span>{props.filterContent}</span>
+      </>
+    );
+  }
+  //con {data}
+  else {
+    return <ul>{itemElements}</ul>;
+  }
 };
 
 export default CharacterList;

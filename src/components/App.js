@@ -4,14 +4,19 @@ import getDataApi from "../services/getDataApi";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterDetail from "./CharacterDetail";
+import Logo from "../images/morty.png";
 
 const App = () => {
   const [items, setItems] = useState([]);
   const [filterContent, setFilterContent] = useState("");
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
+    setLoading(true);
     getDataApi().then((data) => {
       setItems(data);
     });
+    setLoading(false);
   }, []);
 
   //EVENT HANDLERS
@@ -20,6 +25,7 @@ const App = () => {
   };
 
   //RENDER
+  // if (!data.includes)
   const filteredCharacters = items.filter((item) => {
     return item.name.toUpperCase().includes(filterContent.toUpperCase());
   });
@@ -39,9 +45,15 @@ const App = () => {
   return (
     <>
       <h1> Rick and Morty </h1>
-      <Filter handleFilter={handleFilter} />
-      <CharacterList items={filteredCharacters} />
       <Switch>
+        <Route exact path="/">
+          <Filter handleFilter={handleFilter} />
+          {/*<Route exact path="/#" />*/}
+          <CharacterList
+            items={filteredCharacters}
+            filterContent={filterContent}
+          />
+        </Route>
         <Route path="/item/:id" render={renderCharacterDetail} />
       </Switch>
     </>

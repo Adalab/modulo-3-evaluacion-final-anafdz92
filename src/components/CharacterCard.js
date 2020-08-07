@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CharacterCard = (props) => {
-  //CON UN IF DETERMINAR SI LA IMAGEN ES NULL QUE SALGA UNA MÍA
+  console.log(props);
   return (
     <>
       <li>
