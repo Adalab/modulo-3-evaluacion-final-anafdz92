@@ -5,7 +5,7 @@ const CharacterCard = (props) => {
   console.log(props);
   return (
     <>
-      <li>
+      <li className="item">
         <Link to={`/item/${props.item.id}`}>
           <img
             src={props.item.image}

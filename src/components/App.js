@@ -4,13 +4,14 @@ import getDataApi from "../services/getDataApi";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterDetail from "./CharacterDetail";
+// import Reset from "./Reset";
 import Logo from "../images/morty.png";
 import "../stylesheets/App.scss";
 
 const App = () => {
   const [items, setItems] = useState([].sort());
   const [filterContent, setFilterContent] = useState(
-    JSON.parse(localStorage.getItem("myValueLocalStorage")) || ""
+    JSON.parse(localStorage.getItem("myValueLocalStorage")) || "Busca aquí"
   );
   const [loading, setLoading] = useState(false);
 
@@ -31,6 +32,11 @@ const App = () => {
     setFilterContent(data);
   };
 
+  //HANDLE RESET
+  // const resetItemData = (ev) => {
+  //   setFilterContent([]);
+  // };
+
   //RENDER
   const filteredCharacters = items.filter((item) => {
     return item.name.toUpperCase().includes(filterContent.toUpperCase());
@@ -49,11 +55,16 @@ const App = () => {
     <>
       <Switch>
         <Route exact path="/">
-          <img src={Logo} alt="Rick and Morty" title="Rick and Morty" />
-          <Filter handleFilter={handleFilter} filterContent={filterContent} />
-          {loading === true
-            ? "Cargando..."
-            : "Mostrando tus datos cargados! Bien!..."}
+          <div className="title">
+            <img src={Logo} alt="Rick and Morty" title="Rick and Morty" />
+          </div>
+          <div className="filterContainer">
+            {/* <Reset reset={resetItemData} /> */}
+            <Filter handleFilter={handleFilter} filterContent={filterContent} />
+            {loading === true
+              ? "Cargando..."
+              : "Mostrando tus datos cargados! Bien!..."}
+          </div>
           <CharacterList
             items={filteredCharacters}
             filterContent={filterContent}

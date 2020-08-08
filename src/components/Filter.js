@@ -1,7 +1,6 @@
 import React from "react";
 
 const Filter = (props) => {
-  console.log(props.filterContent);
   const handleChange = (ev) => {
     props.handleFilter(ev.target.value);
   };
@@ -12,7 +11,7 @@ const Filter = (props) => {
 
   return (
     <>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className="formFilter">
         <label htmlFor="character"> Encuentra a tu personaje favoritx </label>
         <input
           type="text"

@@ -18,7 +18,7 @@ const CharacterList = (props) => {
   }
   //con {data}
   else {
-    return <ul>{itemElements}</ul>;
+    return <ul className="itemsList">{itemElements}</ul>;
   }
 };
 
