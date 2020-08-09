@@ -20,7 +20,7 @@ const Filter = (props) => {
           id="character"
           onChange={handleChange}
           handleFilter={props.handleFilter}
-          placeholder={props.filterContent} //INTENTO QUE EL LOCAL STORAGE SE  PINTE EN EL VALUE
+          placeholder={props.filterContent}
         />
       </form>
     </>

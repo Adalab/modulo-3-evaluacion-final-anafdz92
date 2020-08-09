@@ -6,6 +6,7 @@ import Filter from "./Filter";
 import CharacterDetail from "./CharacterDetail";
 import Logo from "../images/morty.png";
 import Img from "../images/space.jpg";
+import Reset from "./Reset";
 
 const App = () => {
   const [items, setItems] = useState([].sort());
@@ -32,9 +33,9 @@ const App = () => {
   };
 
   //HANDLE RESET
-  // const resetItemData = (ev) => {
-  //   setFilterContent([]);
-  // };
+  const resetItemData = () => {
+    setFilterContent("Busca aquí");
+  };
 
   //RENDER
   const filteredCharacters = items.filter((item) => {
@@ -64,10 +65,11 @@ const App = () => {
             <img src={Img} alt="morty" title="morty" className="titleImgII" />
           </div>
           <div className="filterContainer">
-            {/* <Reset reset={resetItemData} /> */}
             <Filter handleFilter={handleFilter} filterContent={filterContent} />
             {loading === true ? "Cargando..." : ""}
+            <Reset reset={resetItemData} />
           </div>
+
           <CharacterList
             items={filteredCharacters}
             filterContent={filterContent}
