@@ -29,4 +29,9 @@
   height: 40px;
   width: 92px;
   cursor: pointer;
+  transition: background-color ease 0.8s;
+}
+
+.resetButton:hover {
+  background-color: $color-primary;
 }
