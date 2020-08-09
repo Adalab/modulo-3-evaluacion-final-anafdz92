@@ -3,6 +3,20 @@
   justify-content: center;
   align-items: center;
 }
-// @include for-mobile {
-//   //QUITAR FOTO rick y morty y meter otra más pequeña
-// }
+.titleImgII {
+  display: none;
+}
+@include for-mobile {
+  .titleImg {
+    display: none;
+    height: 267px;
+    width: 300px;
+  }
+  .titleImgII {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 267px;
+    width: 300px;
+  }
+}

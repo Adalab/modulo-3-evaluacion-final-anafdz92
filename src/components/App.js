@@ -4,8 +4,8 @@ import getDataApi from "../services/getDataApi";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterDetail from "./CharacterDetail";
-// import Reset from "./Reset";
 import Logo from "../images/morty.png";
+import Img from "../images/space.jpg";
 
 const App = () => {
   const [items, setItems] = useState([].sort());
@@ -55,7 +55,13 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <div className="title">
-            <img src={Logo} alt="Rick and Morty" title="Rick and Morty" />
+            <img
+              src={Logo}
+              alt="Rick and Morty"
+              title="Rick and Morty"
+              className="titleImg"
+            />
+            <img src={Img} alt="morty" title="morty" className="titleImgII" />
           </div>
           <div className="filterContainer">
             {/* <Reset reset={resetItemData} /> */}
