@@ -8,16 +8,15 @@ const CharacterList = (props) => {
       return <CharacterCard key={item.id} item={item} />;
     });
 
-  if (props.items.length === 0 && !props.items.name === "Busca aquí") {
+  if (props.items.length === 0) {
+    //&& !props.items.name === "Busca aquí"
     return (
       <div className="noCharacter">
         <p>No hay ningún personaje que coincida con la palabra:</p>
         <span>{props.filterContent}</span>
       </div>
     );
-  }
-  //con {data}
-  else {
+  } else {
     return <ul className="itemsList">{itemElements}</ul>;
   }
 };
