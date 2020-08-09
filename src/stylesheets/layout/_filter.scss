@@ -3,13 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin: 25px;
 }
 
 .inputFilter {
   border: 3px solid $color-fontPrimary;
   border-radius: 7px;
   height: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 15px;
 }
 

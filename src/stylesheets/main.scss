@@ -1,5 +1,6 @@
 @import "./core/reset";
 @import "./core/variables";
+@import "./core/mixins";
 @import "./layout/header";
 @import "./layout/filter";
 @import "./layout/characterDetail";
@@ -15,4 +16,10 @@
 }
 .bodyMain {
   background-color: $color-background;
+  @include for-tablet {
+    margin: 15px;
+  }
+  @include for-mobile {
+    margin: 15px;
+  }
 }
