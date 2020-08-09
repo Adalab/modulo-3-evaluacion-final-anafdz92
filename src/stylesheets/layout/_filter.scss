@@ -1,0 +1,17 @@
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.inputFilter {
+  border: 3px solid $color-fontPrimary;
+  border-radius: 7px;
+  height: 30px;
+}
+
+.formFilter {
+  margin: 30px;
+}

@@ -14,6 +14,7 @@ const Filter = (props) => {
       <form onSubmit={submitHandler} className="formFilter">
         <label htmlFor="character"> Encuentra a tu personaje favoritx </label>
         <input
+          className="inputFilter"
           type="text"
           name="character"
           id="character"

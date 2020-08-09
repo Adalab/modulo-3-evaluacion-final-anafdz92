@@ -6,7 +6,6 @@ import Filter from "./Filter";
 import CharacterDetail from "./CharacterDetail";
 // import Reset from "./Reset";
 import Logo from "../images/morty.png";
-import "../stylesheets/App.scss";
 
 const App = () => {
   const [items, setItems] = useState([].sort());
@@ -52,7 +51,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="main">
       <Switch>
         <Route exact path="/">
           <div className="title">
@@ -72,7 +71,7 @@ const App = () => {
         </Route>
         <Route path="/item/:id" render={renderCharacterDetail} />
       </Switch>
-    </>
+    </div>
   );
 };
 

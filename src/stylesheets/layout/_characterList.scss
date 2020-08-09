@@ -1,0 +1,39 @@
+.itemsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+
+  .item {
+    margin-top: 25px;
+    width: 300px;
+    height: 390px;
+    background-color: $color-primary;
+    border-radius: 7px;
+    border: 3px solid $color-fontPrimary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .itemName {
+      background-color: $color-primary;
+      margin-left: 15px;
+      line-height: 25px;
+    }
+    .itemSpecie {
+      background-color: $color-primary;
+      margin-left: 15px;
+      line-height: 25px;
+    }
+    .imgContainer {
+      height: 300px;
+      width: 300px;
+      .itemImg {
+        border-radius: 7px;
+        height: 98%;
+        width: 98%;
+        object-fit: contain;
+      }
+    }
+  }
+}

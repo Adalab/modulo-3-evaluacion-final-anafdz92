@@ -7,13 +7,16 @@ const CharacterCard = (props) => {
     <>
       <li className="item">
         <Link to={`/item/${props.item.id}`}>
-          <img
-            src={props.item.image}
-            alt={props.item.name}
-            title={props.item.name}
-          />
-          <h4>{props.item.name}</h4>
-          <p>{props.item.species}</p>
+          <div className="imgContainer">
+            <img
+              className="itemImg"
+              src={props.item.image}
+              alt={props.item.name}
+              title={props.item.name}
+            />
+          </div>
+          <h4 className="itemName">{props.item.name}</h4>
+          <p className="itemSpecie">{props.item.species}</p>
         </Link>
       </li>
     </>

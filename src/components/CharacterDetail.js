@@ -46,7 +46,7 @@ const CharacterDetail = (props) => {
                 </li>
               </ul>
               <Link to="/">
-                <p className="Close">Cerrar</p>
+                <p className="Close"> Volver</p>
               </Link>
             </div>
           </Link>
