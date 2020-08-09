@@ -6,11 +6,11 @@ const CharacterDetail = (props) => {
   if (props.item === undefined) {
     return (
       <>
-        <section className="bodyDetail">
+        <section className="bodyDetailII">
           <Link to="/item/:id">
             <div className="detail">
               <Link to="/">
-                <p>CIÉRRAME</p>
+                <p className="closeAlert">Volver</p>
               </Link>
               <p>El personaje que buscas no existe </p>
             </div>

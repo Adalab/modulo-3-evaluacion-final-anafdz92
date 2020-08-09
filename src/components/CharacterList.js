@@ -8,12 +8,12 @@ const CharacterList = (props) => {
       return <CharacterCard key={item.id} item={item} />;
     });
 
-  if (props.items.length === 0) {
+  if (props.items.length === 0 && !props.items.name === "Busca aquí") {
     return (
-      <>
+      <div className="noCharacter">
         <p>No hay ningún personaje que coincida con la palabra:</p>
         <span>{props.filterContent}</span>
-      </>
+      </div>
     );
   }
   //con {data}

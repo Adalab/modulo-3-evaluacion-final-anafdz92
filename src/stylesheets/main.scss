@@ -16,6 +16,10 @@
 }
 .bodyMain {
   background-color: $color-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include for-tablet {
     margin: 15px;
   }

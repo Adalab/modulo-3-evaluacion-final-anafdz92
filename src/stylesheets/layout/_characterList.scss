@@ -7,7 +7,7 @@
   padding: 0px;
 
   .item {
-    margin-top: 25px;
+    margin: 25px;
     width: 300px;
     height: 390px;
     background-color: $color-primary;
@@ -27,6 +27,13 @@
       margin-left: 15px;
       line-height: 25px;
     }
+    // .noCharacter {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
+    //   margin: 25px;
+    // }
     .imgContainer {
       height: 300px;
       width: 300px;

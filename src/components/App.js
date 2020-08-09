@@ -66,9 +66,7 @@ const App = () => {
           <div className="filterContainer">
             {/* <Reset reset={resetItemData} /> */}
             <Filter handleFilter={handleFilter} filterContent={filterContent} />
-            {loading === true
-              ? "Cargando..."
-              : "Mostrando tus datos cargados! Bien!..."}
+            {loading === true ? "Cargando..." : ""}
           </div>
           <CharacterList
             items={filteredCharacters}
