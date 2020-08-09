@@ -10,8 +10,12 @@
   border: 3px solid $color-fontPrimary;
   border-radius: 7px;
   height: 30px;
+  margin: 15px;
 }
 
 .formFilter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 30px;
 }

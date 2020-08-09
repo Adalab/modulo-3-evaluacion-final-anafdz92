@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const CharacterDetail = (props) => {
   if (props.item === undefined) {
@@ -61,5 +62,13 @@ const CharacterDetail = (props) => {
 //   iClassName = "fas fa-skull-crossbones";
 // }
 //TRYING ICONS
+
+CharacterDetail.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  species: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  episode: PropTypes.string.isRequired,
+};
 
 export default CharacterDetail;

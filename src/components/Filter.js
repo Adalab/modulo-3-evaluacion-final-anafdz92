@@ -12,7 +12,7 @@ const Filter = (props) => {
   return (
     <>
       <form onSubmit={submitHandler} className="formFilter">
-        <label htmlFor="character"> Encuentra a tu personaje favoritx </label>
+        <label htmlFor="character"> ENCUENTRA A A TU PERSONAJE FAVORITO </label>
         <input
           className="inputFilter"
           type="text"
