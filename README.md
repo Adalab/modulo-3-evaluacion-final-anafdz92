@@ -58,7 +58,7 @@ A Miguel y María, por la paciencia y la pedagogía pero sobre todo por "los cui
 
 modulo-2-evaluacion-final-anafdz92 created by GitHub Classroom
 
-## Available Scripts
+## Scripts Disponibles
 
 En este proyecto puedes ejecutar...
 
@@ -95,32 +95,32 @@ En su lugar, copiará todos los archivos de configuración y las dependencias tr
 
 No es necesario que utilice nunca "eject". El conjunto de funciones seleccionadas es adecuado para implementaciones pequeñas y medianas, y no debes sentirse obligadx a utilizar esta función. Sin embargo, entendemos que esta herramienta no sería útil si no pudieras personalizarla cuando estés listo para usarla.
 
-## Learn More
+## Para más información
 
 Puedes obtener más información en la [documentación de la aplicación Create React](https://facebook.github.io/create-react-app/docs/getting-started).
 
 Para aprender React... [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Particiones de Código
 
 Esta sección se ha movido aquí: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+### Bundle Size
 
 Esta sección se ha movido aquí: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+### Construyendo una Web App progresiva
 
 Esa sección se ha movido aquí: htps://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+### Configuración Avanzada
 
 Esta sección se ha movido aquí: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+### Desarrollo
 
 Esta sección se ha movido aquí: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+### `npm run build`
 
 Esta sección se ha movido aquí: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
