@@ -8,6 +8,12 @@
   min-height: 100vh;
   background: $color-background;
 
+  @include for-tablet {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .detail {
     border-radius: 15px;
     width: 768px;
@@ -18,6 +24,10 @@
     background-color: $color-primary;
     position: relative;
 
+    @include for-tablet {
+      margin: 15px;
+      width: 700px;
+    }
     .textDetail {
       list-style-type: none;
       background-color: $color-primary;
@@ -110,12 +120,3 @@
     }
   }
 }
-
-//   .closeDetail {
-//     align-self: flex-end;
-//     //   position: absolute;
-//     //   top: 0;
-//     //   right: 0;
-//     //   margin-right: 20px;
-//   }
-// }

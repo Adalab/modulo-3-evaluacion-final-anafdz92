@@ -19,6 +19,17 @@ const CharacterDetail = (props) => {
       </>
     );
   } else {
+    let iClassName = "";
+    let iClassSpecie = "";
+
+    if (props.item.status === "Dead") {
+      iClassName = "fas fa-skull-crossbones";
+    }
+    if (props.item.species === "Human") {
+      iClassSpecie = "far fa-user-circle";
+    } else if (props.item.species === "Alien") {
+      iClassSpecie = "fab fa-reddit-alien";
+    }
     return (
       <>
         <section className="bodyDetail">
@@ -34,12 +45,14 @@ const CharacterDetail = (props) => {
               </div>
               <ul className="textDetail">
                 <li>Nombre: {props.item.name}</li>
-                <li>Especie: {props.item.species}</li>
+                <li>
+                  Especie: {props.item.species}
+                  <i className={iClassSpecie}></i>
+                </li>
                 <li>Planeta: {props.item.location}</li>
                 <li>
                   Vivo o muerto?: {props.item.status}
-                  {/* <i className={iClassName}></i> */}
-                  <i className="fas fa-skull-crossbones"></i>
+                  <i className={iClassName}></i>
                 </li>
                 <li>
                   Número de Episodios en los que aparece:{" "}
@@ -56,19 +69,13 @@ const CharacterDetail = (props) => {
     );
   }
 };
-// let iClassName = "";
 
-// if (props.item.status.dead) {
-//   iClassName = "fas fa-skull-crossbones";
-// }
-//TRYING ICONS
-
-CharacterDetail.propTypes = {
+PropTypes.shape({
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   episode: PropTypes.string.isRequired,
-};
+});
 
 export default CharacterDetail;

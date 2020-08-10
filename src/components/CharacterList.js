@@ -9,7 +9,7 @@ const CharacterList = (props) => {
     });
 
   if (props.items.length === 0) {
-    //&& !props.items.name === "Busca aquí"
+    //&& !props.items.name === {`Busca aquí`}
     return (
       <div className="noCharacter">
         <p>No hay ningún personaje que coincida con la palabra:</p>

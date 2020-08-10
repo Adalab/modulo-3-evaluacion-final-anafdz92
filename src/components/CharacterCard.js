@@ -23,11 +23,10 @@ const CharacterCard = (props) => {
     </>
   );
 };
-
-CharacterCard.propTypes = {
+PropTypes.shape({
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired,
-};
+});
 
 export default CharacterCard;

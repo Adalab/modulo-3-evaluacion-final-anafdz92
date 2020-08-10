@@ -20,7 +20,8 @@ const Filter = (props) => {
           id="character"
           onChange={handleChange}
           handleFilter={props.handleFilter}
-          placeholder={props.filterContent}
+          placeholder={"Busca aquí"}
+          value={props.filterContent}
         />
       </form>
     </>

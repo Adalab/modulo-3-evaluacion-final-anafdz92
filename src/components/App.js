@@ -11,7 +11,7 @@ import Reset from "./Reset";
 const App = () => {
   const [items, setItems] = useState([].sort());
   const [filterContent, setFilterContent] = useState(
-    JSON.parse(localStorage.getItem("myValueLocalStorage")) || "Busca aquí"
+    JSON.parse(localStorage.getItem("myValueLocalStorage")) || ""
   );
   const [loading, setLoading] = useState(false);
 
@@ -34,7 +34,7 @@ const App = () => {
 
   //HANDLE RESET
   const resetItemData = () => {
-    setFilterContent("Busca aquí");
+    setFilterContent("");
   };
 
   //RENDER
